@@ -1,0 +1,22 @@
+.plane.play {
+   top: 0;
+   opacity: 1;
+   animation: plane 3s ease-in-out;
+   animation-delay: .5s;
+}
+
+@keyframes plane { 
+    0% {
+        left: 0;
+    }  
+    40% { 
+        left: 20%;
+    }
+    60% {
+        left: 10%;
+    }
+    100% {
+        top: 0%;
+        left: 100%;
+    } 
+}         
