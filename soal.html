@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulangan Online</title>
+    <link rel="stylesheet" href="soal.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ulangan hahahaha</h1>
+        <form id="quiz-form">
+            
+            <div class="question">
+                <p>1. Desain grafis yang memanfaatkan ruang tiga dimensi dan sering ditemukan di lingkungan publik disebut ...</p>
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    a. Desain grafis lingkungan
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    b. Desain produk
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    c. Desain pameran
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="d">
+                    d. Desain tata ruang
+                </label>
+            </div>
+
+          
+            <button type="submit">kirim jawaban</button>
+        </form>
+
+       
+        <div id="result" class="hidden">
+            <h2>Hasil Ulangan</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script>
+     
+        document.getElementById('quiz-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+          
+            const correctAnswer = 'a'; 
+
+           
+            const selected = document.querySelector('input[name="q1"]:checked');
+
+           
+            if (selected && selected.value === correctAnswer) {
+                document.getElementById('score').textContent = "Jawaban Anda benar!";
+            } else {
+                document.getElementById('score').textContent = "Jawaban Anda salah. Jawaban yang benar adalah 'a. Desain grafis lingkungan'.";
+            }
+
+           
+            document.getElementById('result').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
